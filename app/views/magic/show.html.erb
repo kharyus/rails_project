@@ -1,2 +1,25 @@
-<h1>Magic#show</h1>
-<p>Find me in app/views/magic/show.html.erb</p>
+<h1>Magic The Gathering - Card</h1>
+<p>Name: <%= @card.Name %></p>
+<p>Mana Cost: <%= @card.Manacost %></p>
+<p>Colors:
+    <ul>
+        <% @card.colors.each do |color| %>
+            <li>
+                <%= color.Name %>
+            </li>
+        <% end %>
+    </ul>
+</p>
+<p>Type: <%= @card.TypeText %></p>
+<p>Types:
+    <ul>
+        <% @card.types.each do |type| %>
+            <li>
+                <%= type.Name %>
+            </li>
+        <% end %>
+    </ul>
+</p>
+<p>Text: <%= @card.Text %></p>
+<p>Power: <%= @card.Power %></p>
+<p>Toughness: <%= @card.Thoughness %></p>

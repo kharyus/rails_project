@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   get 'products/index'
-  get 'products/show'
+  get 'products/:id', to: 'products#show', as: 'product'
+  get 'products', to: 'products#index'
+
   get 'magic/index'
-  get 'magic/show'
+  get 'magic/:id', to: 'magic#show', as: 'magic'
+  get 'magic', to: 'magic#index'
+
   get 'pages/index'
   get 'pages/about'
   get 'about', to: 'pages#about'
