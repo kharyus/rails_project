@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_05_194211) do
+ActiveRecord::Schema.define(version: 2018_10_06_155228) do
 
   create_table "card_colors", force: :cascade do |t|
     t.integer "card_id"
@@ -49,6 +49,22 @@ ActiveRecord::Schema.define(version: 2018_10_05_194211) do
     t.string "Name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "materials", force: :cascade do |t|
+    t.string "Name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "Name"
+    t.decimal "Price"
+    t.integer "Quantity"
+    t.integer "material_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["material_id"], name: "index_products_on_material_id"
   end
 
   create_table "types", force: :cascade do |t|
