@@ -34,11 +34,7 @@ ActiveRecord::Schema.define(version: 2018_10_06_155228) do
     t.string "Name"
     t.string "Manacost"
     t.string "TypeText"
-    t.string "Rarity"
     t.string "Text"
-    t.string "Flavor"
-    t.string "Artist"
-    t.integer "Number"
     t.integer "Power"
     t.integer "Thoughness"
     t.datetime "created_at", null: false

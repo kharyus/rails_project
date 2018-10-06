@@ -8,5 +8,5 @@ class Card < ApplicationRecord
     has_many :types, through: :card_types
 
     # Validations
-    validates :Name, :Manacost, :TypeText, :Rarity, :Text, :Flavor, :Artist, :Number, :Power, :Thoughness, presence: true
+    validates :Name, presence: true
 end
