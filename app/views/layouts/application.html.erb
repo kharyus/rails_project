@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <h1>Rails Project</h1>
+    <div><%= link_to "Home", root_path %> | <%= link_to "About", :controller => :pages, :action => :about %></div>
     <%= yield %>
   </body>
 </html>
