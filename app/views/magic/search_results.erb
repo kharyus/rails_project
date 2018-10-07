@@ -1,0 +1,13 @@
+<h1>Magic The Gathering</h1>
+
+<% if @cards.empty? %>
+    <p>No cards found.</p>
+<% else %>
+    <p>Found <%= @cards.count %> results.</p>
+
+    <ul>
+        <% @cards.each do |card| %>
+            <li><%= link_to card.Name, magic_path(card) %></li>
+        <% end %>
+    </ul>
+<% end %>

@@ -1,4 +1,13 @@
 <h1>Magic The Gathering</h1>
+
+<!-- Search -->
+<%= form_tag("search_results", method: "get") do %>
+    <%= label_tag(:q, "Search for: ") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+<% end %>
+
+<!-- List -->
 <ul>
     <% @cards.each do |card| %>
         <li><%= link_to card.Name, magic_path(card) %></li>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'products', to: 'products#index'
 
   get 'magic/index'
+  get 'magic/search_results'
   get 'magic/:id', to: 'magic#show', as: 'magic'
   get 'magic', to: 'magic#index'
 
